@@ -21,15 +21,26 @@
 
 
     <bean id="hosp1" class="com.bhv.demo.model.Hospital">
-        <property name="name" value="VISION Eye Care" />
+        <property name="name" value="VISION Eye Care"/>
         <property name="departments">
             <list>
                 <value>ADMIN</value>
                 <value>NURSE</value>
                 <value>DOCTOR</value>
                 <value>HELPER</value>
-                <null />
+                <null/>
             </list>
+        </property>
+    </bean>
+
+    <bean id="carDealer1" class="com.bhv.demo.model.CarDealer">
+        <property name="name" value="BMW AMD"/>
+        <property name="models">
+            <set>
+                <value>M5</value>
+                <value>M5 Turbo</value>
+                <value>M3 Turbo</value>
+            </set>
         </property>
     </bean>
 </beans>

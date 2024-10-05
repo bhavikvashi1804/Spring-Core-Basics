@@ -1,5 +1,6 @@
 package com.bhv.demo;
 
+import com.bhv.demo.model.CarDealer;
 import com.bhv.demo.model.Employee;
 import com.bhv.demo.model.Hospital;
 import org.springframework.context.ApplicationContext;
@@ -22,5 +23,8 @@ public class Main {
 
         Hospital hosp1= applicationContext.getBean("hosp1", Hospital.class);
         System.out.println(hosp1);
+
+        CarDealer carDealer= applicationContext.getBean("carDealer1", CarDealer.class);
+        System.out.println(carDealer);
     }
 }
