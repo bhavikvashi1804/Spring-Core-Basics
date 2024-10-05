@@ -18,4 +18,18 @@
 
     <bean id="emp2" class="com.bhv.demo.model.Employee"
           p:id="102" p:name="Steve Jones" p:department="CP"/>
+
+
+    <bean id="hosp1" class="com.bhv.demo.model.Hospital">
+        <property name="name" value="VISION Eye Care" />
+        <property name="departments">
+            <list>
+                <value>ADMIN</value>
+                <value>NURSE</value>
+                <value>DOCTOR</value>
+                <value>HELPER</value>
+                <null />
+            </list>
+        </property>
+    </bean>
 </beans>
