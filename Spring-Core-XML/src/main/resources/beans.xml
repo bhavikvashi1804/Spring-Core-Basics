@@ -8,4 +8,10 @@
     <bean id="appName" class="java.lang.String">
         <constructor-arg value="Demo Application" />
     </bean>
+
+    <bean id="emp1" class="com.bhv.demo.model.Employee">
+        <property name="id" value="101"/>
+        <property name="name" value="John Rick" />
+        <property name="department" value="IT" />
+    </bean>
 </beans>
