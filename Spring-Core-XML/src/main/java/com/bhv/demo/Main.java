@@ -13,7 +13,10 @@ public class Main {
         String appName = applicationContext.getBean(String.class);
         System.out.println(appName);
 
-        Employee emp1= applicationContext.getBean(Employee.class);
+        Employee emp1= applicationContext.getBean("emp1", Employee.class);
         System.out.println(emp1);
+
+        Employee emp2= applicationContext.getBean("emp2", Employee.class);
+        System.out.println(emp2);
     }
 }
