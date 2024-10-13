@@ -94,9 +94,14 @@
           p:country="India"
           p:zip="390001" />
 
-    <bean id="home" class="com.bhv.demo.lifecycle.Home" init-method="doSetUp" destroy-method="doCleanUp">
+<!--    <bean id="home" class="com.bhv.demo.lifecycle.Home" init-method="doSetUp" destroy-method="doCleanUp">-->
+<!--        <property name="name" value="Sweet Home" />-->
+<!--    </bean>-->
+
+    <bean id="home1" class="com.bhv.demo.lifecycle.Home1">
         <property name="name" value="Sweet Home" />
     </bean>
+
 
 
 </beans>
