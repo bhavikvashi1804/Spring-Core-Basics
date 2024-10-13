@@ -43,4 +43,16 @@
             </set>
         </property>
     </bean>
+
+    <bean id="customer1" class="com.bhv.demo.model.Customer">
+        <property name="id" value="101" />
+        <property name="name" value="Stephen Martin" />
+        <property name="products">
+            <map>
+                <entry key="101" value="Hp Notebook 100" />
+                <entry key="102" value="Dell Victus" />
+                <entry key="103" value="Asus ZenBook 14" />
+            </map>
+        </property>
+    </bean>
 </beans>
