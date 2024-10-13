@@ -65,4 +65,34 @@
             </props>
         </property>
     </bean>
+
+    <bean id="student1" class="com.bhv.demo.model.Student">
+        <property name="id" value="1001" />
+        <property name="name" value="Meet Patel" />
+        <property name="age" value="27" />
+        <property name="address" ref="add1" />
+    </bean>
+
+    <bean id="add1" class="com.bhv.demo.model.Address">
+        <property name="street" value="Ram Vatika" />
+        <property name="city" value="Ankleshwar" />
+        <property name="state" value="Gujarat" />
+        <property name="country" value="India" />
+        <property name="zip" value="393001" />
+    </bean>
+
+    <bean id="student2" class="com.bhv.demo.model.Student"
+          p:id="1002"
+          p:name="Yash Patel"
+          p:age="28"
+          p:address-ref="add2" />
+
+    <bean id="add2" class="com.bhv.demo.model.Address"
+          p:street="Sai Nath Society"
+          p:city="Diwalipura"
+          p:state="Gujarat"
+          p:country="India"
+          p:zip="390001" />
+
+
 </beans>

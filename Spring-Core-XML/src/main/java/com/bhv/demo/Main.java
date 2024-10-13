@@ -30,5 +30,11 @@ public class Main {
 
         Languages languages= applicationContext.getBean("lang1", Languages.class);
         System.out.println(languages);
+
+        Student student1= applicationContext.getBean("student1", Student.class);
+        System.out.println(student1);
+
+        Student student2= applicationContext.getBean("student2", Student.class);
+        System.out.println(student2);
     }
 }
