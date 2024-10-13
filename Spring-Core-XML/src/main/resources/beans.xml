@@ -55,4 +55,14 @@
             </map>
         </property>
     </bean>
+
+    <bean id="lang1" class="com.bhv.demo.model.Languages" >
+        <property name="countryAndLang">
+            <props>
+                <prop key="IN">Hindi</prop>
+                <prop key="US">English</prop>
+                <prop key="UK">British English</prop>
+            </props>
+        </property>
+    </bean>
 </beans>

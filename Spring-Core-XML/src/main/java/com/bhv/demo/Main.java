@@ -1,9 +1,6 @@
 package com.bhv.demo;
 
-import com.bhv.demo.model.CarDealer;
-import com.bhv.demo.model.Customer;
-import com.bhv.demo.model.Employee;
-import com.bhv.demo.model.Hospital;
+import com.bhv.demo.model.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -30,5 +27,8 @@ public class Main {
 
         Customer customer1= applicationContext.getBean("customer1", Customer.class);
         System.out.println(customer1);
+
+        Languages languages= applicationContext.getBean("lang1", Languages.class);
+        System.out.println(languages);
     }
 }
