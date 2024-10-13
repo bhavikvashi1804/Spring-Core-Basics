@@ -98,9 +98,12 @@
 <!--        <property name="name" value="Sweet Home" />-->
 <!--    </bean>-->
 
-    <bean id="home1" class="com.bhv.demo.lifecycle.Home1">
-        <property name="name" value="Sweet Home" />
-    </bean>
+<!--    <bean id="home1" class="com.bhv.demo.lifecycle.Home1">-->
+<!--        <property name="name" value="Sweet Home" />-->
+<!--    </bean>-->
+
+    <bean id="home2" class="com.bhv.demo.lifecycle.Home2" p:name="Sweet Home" />
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
 
 
