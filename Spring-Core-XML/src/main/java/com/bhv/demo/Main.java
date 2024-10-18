@@ -1,5 +1,6 @@
 package com.bhv.demo;
 
+import com.bhv.demo.model.Employee;
 import com.bhv.demo.scope.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,15 +10,9 @@ public class Main {
         System.out.println("Hello World!");
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-        Student student = (Student) context.getBean("s1");
-        System.out.println(student.hashCode());
-        Student student1 = (Student) context.getBean("s1");
-        System.out.println(student1.hashCode());
-
-        Student student2 = (Student) context.getBean("s2");
-        System.out.println(student2.hashCode());
-        Student student3 = (Student) context.getBean("s2");
-        System.out.println(student3.hashCode());
-
+        Employee employee = (Employee) context.getBean("emp3");
+        System.out.println(employee);
+        Employee employee1 = (Employee) context.getBean("emp4");
+        System.out.println(employee1);
     }
 }

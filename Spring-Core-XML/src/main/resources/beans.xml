@@ -19,6 +19,21 @@
         <property name="department" value="IT"/>
     </bean>
 
+    <bean id="emp3" class="com.bhv.demo.model.Employee" >
+        <constructor-arg value="103" />
+        <constructor-arg  value="Stephen Martin" />
+        <constructor-arg  value="CP" />
+    </bean>
+
+    <bean id="emp4" class="com.bhv.demo.model.Employee" >
+        <constructor-arg index="0" value="104" />
+        <constructor-arg index="2" value="CS" />
+        <constructor-arg index="1" value="Joash Martin" />
+    </bean>
+
+
+
+
     <bean id="emp2" class="com.bhv.demo.model.Employee"
           p:id="102" p:name="Steve Jones" p:department="CP"/>
 
