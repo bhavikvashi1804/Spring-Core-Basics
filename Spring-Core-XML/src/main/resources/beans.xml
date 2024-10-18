@@ -107,6 +107,9 @@
 
     <bean id="home2" class="com.bhv.demo.lifecycle.Home2" p:name="Sweet Home" />
 
+    <bean id="s1" class="com.bhv.demo.scope.Student" scope="prototype"/>
+    <bean id="s2" class="com.bhv.demo.scope.Student" scope="singleton"/>
+
 
 
 </beans>
