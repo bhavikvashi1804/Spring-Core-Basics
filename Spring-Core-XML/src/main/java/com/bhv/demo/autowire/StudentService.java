@@ -5,16 +5,17 @@ public class StudentService {
 
     private StudentDAO studentDAO;
 
-    public StudentService() {}
+    public StudentService() {
+        System.out.println("Default constructor");
+    }
 
     public void setStudentDAO(StudentDAO studentDAO) {
         System.out.println("Setter called");
+        System.out.println(studentDAO.getName());
         this.studentDAO = studentDAO;
     }
 
-    public StudentService(StudentDAO studentDAO) {
-        this.studentDAO = studentDAO;
-    }
+
 
     public void getData(){
         System.out.println("Inside getData method of Service");
