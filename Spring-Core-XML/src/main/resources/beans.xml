@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -31,6 +32,18 @@
         <constructor-arg index="1" value="Joash Martin" />
     </bean>
 
+<!--    <bean id="emp6" class="com.bhv.demo.model.Employee"-->
+<!--          c:_0="105"-->
+<!--          c:_1="Joash Actine"-->
+<!--          c:_2="IAM" />-->
+
+    <bean id="emp6" class="com.bhv.demo.model.Employee"
+          c:id="101"
+          c:name="Hemil Tosh"
+
+          c:department="IAM"
+
+   />
 
 
 
