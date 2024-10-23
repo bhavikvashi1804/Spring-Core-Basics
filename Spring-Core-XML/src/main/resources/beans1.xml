@@ -8,6 +8,6 @@
 
     <bean id="studentService"
           class="com.bhv.demo.autowire.StudentService"
-          autowire="constructor" />
+          autowire="byType" />
 
 </beans>

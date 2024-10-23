@@ -7,6 +7,11 @@ public class StudentService {
 
     public StudentService() {}
 
+    public void setStudentDAO(StudentDAO studentDAO) {
+        System.out.println("Setter called");
+        this.studentDAO = studentDAO;
+    }
+
     public StudentService(StudentDAO studentDAO) {
         this.studentDAO = studentDAO;
     }
