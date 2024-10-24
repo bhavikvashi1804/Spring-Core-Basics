@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="studentDAO1" class="com.bhv.demo.autowire.StudentDAO" >
+    <bean id="studentDAO" class="com.bhv.demo.autowire.StudentDAO" >
         <property name="name" value="studentDAO1" />
     </bean>
 
