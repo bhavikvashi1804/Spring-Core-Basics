@@ -1,5 +1,6 @@
 package com.bhv.aop;
 
+import com.bhv.aop.aspects.LogginAspect;
 import com.bhv.aop.config.AppConfig;
 import com.bhv.aop.service.Calculator;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +15,8 @@ public class Main {
 
         Calculator calculator = (Calculator) applicationContext.getBean("calculator");
         System.out.println(calculator.add(10l,20l));
+
+        LogginAspect logginAspect = (LogginAspect) applicationContext.getBean("logginAspect");
 
     }
 }
