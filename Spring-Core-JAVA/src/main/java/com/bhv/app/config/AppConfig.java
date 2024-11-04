@@ -18,10 +18,10 @@ public class AppConfig {
     }
 
     @Bean
-    Person person() {
+    Person person(Vehicle vehicle) {
         Person person = new Person();
         person.setName("Joffers Kane");
-        person.setVehicle(vehicle());
+        person.setVehicle(vehicle);
         return person;
     }
 
