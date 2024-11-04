@@ -3,6 +3,7 @@ package com.bhv.app.config;
 
 import com.bhv.app.model.Person;
 import com.bhv.app.model.Vehicle;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -18,7 +19,7 @@ public class AppConfig {
         return vehicle;
     }
 
-    @Bean
+    @Bean(name = "BMW_M5")
     Vehicle vehicle1() {
         Vehicle vehicle = new Vehicle();
         vehicle.setName("BMW M3");
@@ -26,7 +27,6 @@ public class AppConfig {
     }
 
     @Bean
-    @Primary
     Vehicle vehicle2() {
         Vehicle vehicle = new Vehicle();
         vehicle.setName("Astin Martin DB12");
@@ -35,7 +35,7 @@ public class AppConfig {
 
 
     @Bean
-    Person person(Vehicle vehicle) {
+    Person person(@Qualifier("BMW_M5") Vehicle vehicle) {
         Person person = new Person();
         person.setName("Joffers Kane");
         person.setVehicle(vehicle);
