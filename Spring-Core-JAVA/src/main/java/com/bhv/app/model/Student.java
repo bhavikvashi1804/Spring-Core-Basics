@@ -11,9 +11,13 @@ public class Student {
 
     private School school;
 
-    @Autowired
     public void setSchool(School school) {
         System.out.println("Setting school");
+        this.school = school;
+    }
+
+    @Autowired
+    public Student(School school) {
         this.school = school;
     }
 
