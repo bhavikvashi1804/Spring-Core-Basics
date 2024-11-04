@@ -21,6 +21,7 @@ public class AppConfig {
     Person person() {
         Person person = new Person();
         person.setName("Joffers Kane");
+        person.setVehicle(vehicle());
         return person;
     }
 
