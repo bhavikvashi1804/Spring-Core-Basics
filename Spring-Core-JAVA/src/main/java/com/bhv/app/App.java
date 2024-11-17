@@ -9,7 +9,8 @@ public class App {
 
 
     public static void main(String[] args) {
-        annotationBasedConfig();
+        //annotationBasedConfig();
+        javaBasedConfig();
     }
 
     static void javaBasedConfig(){

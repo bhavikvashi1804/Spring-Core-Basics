@@ -13,13 +13,14 @@ public class AppConfig {
 
 
     @Bean(name = "vehicle")
+    @Primary
     Vehicle vehicle() {
         Vehicle vehicle = new Vehicle();
         vehicle.setName("BMW M5");
         return vehicle;
     }
 
-    @Bean(name = "BMW_M5")
+    @Bean(name = "BMW_M3")
     Vehicle vehicle1() {
         Vehicle vehicle = new Vehicle();
         vehicle.setName("BMW M3");
@@ -35,7 +36,7 @@ public class AppConfig {
 
 
     @Bean
-    Person person(@Qualifier("BMW_M5") Vehicle vehicle) {
+    Person person(Vehicle vehicle) {
         Person person = new Person();
         person.setName("Joffers Kane");
         person.setVehicle(vehicle);
