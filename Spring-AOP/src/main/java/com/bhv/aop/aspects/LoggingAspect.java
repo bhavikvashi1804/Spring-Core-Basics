@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class LogginAspect {
+public class LoggingAspect {
 
     @Before("execution(public Long com.bhv.aop.service.Calculator.add(..))")
     public void logBefore(JoinPoint joinPoint) {
