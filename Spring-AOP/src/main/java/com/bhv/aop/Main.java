@@ -14,8 +14,8 @@ public class Main {
         System.out.println(applicationContext.getBean("appName"));
 
         Calculator calculator = (Calculator) applicationContext.getBean("calculator");
-        System.out.println(calculator.add(10l,20l));
-        System.out.println(calculator.convertUSDToINR(1L));
+       // System.out.println(calculator.add(10l,20l));
+        System.out.println(calculator.convertUSDToINR(-11L));
 
     }
 }

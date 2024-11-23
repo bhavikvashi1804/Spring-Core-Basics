@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 
-    @Before("execution(public Long com.bhv.aop.service.Calculator.add(..))")
+   // @Before("execution(public Long com.bhv.aop.service.Calculator.add(..))")
     public void logBefore(JoinPoint joinPoint) {
         String className = joinPoint.getSignature().getDeclaringTypeName();
         String methodName = joinPoint.getSignature().getName();
@@ -22,7 +22,7 @@ public class LoggingAspect {
         }
     }
 
-    @After("execution(public Long com.bhv.aop.service.Calculator.add(..))")
+   // @After("execution(public Long com.bhv.aop.service.Calculator.add(..))")
     public void logAfter(JoinPoint joinPoint) {
         String className = joinPoint.getSignature().getDeclaringTypeName();
         String methodName = joinPoint.getSignature().getName();
@@ -33,6 +33,15 @@ public class LoggingAspect {
         for (Object arg : args) {
             System.out.println("arg : " + arg);
         }
+    }
+
+    @Around("execution(public Long com.bhv.aop.service.Calculator.convertUSDToINR(..)) && args(usd)")
+    public Object validateAndUpdate(ProceedingJoinPoint joinPoint, Long usd) throws Throwable{
+        System.out.println("Requested USD : " + usd);
+        if(usd < 0)
+            usd = -usd;
+        Object obj = joinPoint.proceed(new Object[]{usd});
+        return obj;
     }
 
 }
