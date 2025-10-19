@@ -23,26 +23,22 @@ public class Calculator1 {
         return a + b;
     }
 
-    public Long convertUSDToINR(Long usd) {
-        try {
-            String response = webClient.get()
-                    .uri(uriBuilder -> uriBuilder
-                            .path("/convert")
-                            .queryParam("from", "USD")
-                            .queryParam("to", "INR")
-                            .queryParam("amount", usd)
-                            .build())
-                    .retrieve()
-                    .bodyToMono(String.class)
-                    .block(); // blocking still used for simplicity
+    public Double convertUSDToINR(Long usd) throws Exception {
 
-            double result = objectMapper.readTree(response)
-                    .path("result").asDouble();
+        String response = webClient.get()
+                .uri(uriBuilder -> uriBuilder
+                        .path("/convert")
+                        .queryParam("from", "USD")
+                        .queryParam("to", "INR")
+                        .queryParam("amount", usd)
+                        .build())
+                .retrieve()
+                .bodyToMono(String.class)
+                .block(); // blocking still used for simplicity
 
-            return Math.round(result);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return 0L;
-        }
+        Double result = objectMapper.readTree(response)
+                .path("result").asDouble();
+
+        return result;
     }
 }
