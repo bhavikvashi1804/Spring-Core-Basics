@@ -1,4 +1,4 @@
-package com.bhv.cis.config;
+package com.bhv.cis.client;
 
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientManager;
 import org.springframework.security.oauth2.client.web.reactive.function.client.ServletOAuth2AuthorizedClientExchangeFilterFunction;
