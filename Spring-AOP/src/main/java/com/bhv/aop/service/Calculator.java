@@ -27,27 +27,27 @@ public class Calculator {
     }
 
     public Long convertUSDToINR(Long usd) {
-        String baseURL = currencyAPIDetails.getURL();
-        String apiKey = currencyAPIDetails.getApiKey();
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("x-rapidapi-key", apiKey);
-
-        Map<String, Object> params = Map.of(
-                "from", "USD",
-                "to", "INR",
-                "amount",usd
-        );
-
-        String URL = addQueryParams(baseURL +"convert", params);
-        // Make the GET request with the headers
-        ResponseEntity<String> response = restTemplate.exchange(URL, HttpMethod.GET,
-                new org.springframework.http.HttpEntity<>(headers), String.class);
-
-        // Return the response body (API response)
-        String result = response.getBody();
-
-        System.out.println(result);
+//        String baseURL = currencyAPIDetails.getURL();
+//        String apiKey = currencyAPIDetails.getApiKey();
+//
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.set("x-rapidapi-key", apiKey);
+//
+//        Map<String, Object> params = Map.of(
+//                "from", "USD",
+//                "to", "INR",
+//                "amount", usd
+//        );
+//
+//        String URL = addQueryParams(baseURL + "convert", params);
+//        // Make the GET request with the headers
+//        ResponseEntity<String> response = restTemplate.exchange(URL, HttpMethod.GET,
+//                new org.springframework.http.HttpEntity<>(headers), String.class);
+//
+//        // Return the response body (API response)
+//        String result = response.getBody();
+//
+//        System.out.println(result);
         return 0l;
     }
 

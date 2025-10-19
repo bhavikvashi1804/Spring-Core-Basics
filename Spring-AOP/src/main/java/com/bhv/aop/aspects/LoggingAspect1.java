@@ -1,15 +1,19 @@
 package com.bhv.aop.aspects;
 
-import org.aspectj.lang.*;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
 
 @Aspect
 @Component
-public class LoggingAspect {
+public class LoggingAspect1 {
 
-   @Before("execution(public Long com.bhv.aop.service.Calculator.add(..))")
+   @Before("execution(public Long com.bhv.aop.service.Calculator1.add(..))")
     public void logBefore(JoinPoint joinPoint) {
         String className = joinPoint.getSignature().getDeclaringTypeName();
         String methodName = joinPoint.getSignature().getName();
@@ -22,7 +26,7 @@ public class LoggingAspect {
         }
     }
 
-   @After("execution(public Long com.bhv.aop.service.Calculator.add(..))")
+   @After("execution(public Long com.bhv.aop.service.Calculator1.add(..))")
     public void logAfter(JoinPoint joinPoint) {
         String className = joinPoint.getSignature().getDeclaringTypeName();
         String methodName = joinPoint.getSignature().getName();
